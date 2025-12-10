@@ -79,7 +79,7 @@ impl ExpressionVisitor<f64, EvaluatorError> for Evaluator {
 }
 
 pub struct PrettyPrinterVisitor {
-    output: String,
+    pub output: String,
 }
 
 impl ExpressionVisitor<String, ()> for PrettyPrinterVisitor {

@@ -1,10 +1,7 @@
-use crate::calcmath::calc::{Calculator, Console};
-
 use std::io;
 use std::io::Write;
 
-mod parsemath;
-mod calcmath;
+use calculator::calcmath::calc::{Console, Calculator};
 
 struct Terminal {
 }
