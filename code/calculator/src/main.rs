@@ -1,5 +1,35 @@
+use crate::calcmath::calc::{Calculator, Console};
+
+use std::io;
+use std::io::Write;
+
 mod parsemath;
+mod calcmath;
+
+struct Terminal {
+}
+
+impl Console for Terminal {
+    fn readline(&self) -> String {
+        io::stdout().flush().unwrap(); // Ensure the prompt is printed
+
+        let mut input = String::new();
+        io::stdin().read_line(&mut input).unwrap();
+
+        input.trim().into()
+    }
+
+    fn println(&self, text: &str) {
+        println!("{}", text);
+    }
+
+    fn print(&self, text: &str) {
+        print!("{}", text);
+    }
+}
 
 fn main() {
-    println!("Hello, world!");
+    let mut terminal = Terminal{};
+    let mut calc = Calculator::new(&mut terminal);
+    calc.run();
 }

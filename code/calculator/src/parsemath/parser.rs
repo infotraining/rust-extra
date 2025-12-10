@@ -12,6 +12,8 @@ pub enum Expression {
     Grouping(Box<Expression>),
 }
 
+
+
 #[derive(Error, Debug, PartialEq)]
 pub enum ParserError {
     #[error("Syntax error: {0}")]

@@ -5,6 +5,7 @@ edition = "2024"
 
 [dependencies]
 thiserror = "2.0.17"
+mockall = "0.13.1"
 
 [dev-dependencies]
 rstest = "0.26.1"
