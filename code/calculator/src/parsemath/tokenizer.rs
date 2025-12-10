@@ -2,7 +2,7 @@ use std::iter::Peekable;
 use std::str::Chars;
 use thiserror::Error;
 
-#[derive(Debug, PartialEq)]
+#[derive(Debug, PartialEq, Clone)]
 pub enum Token {
     Plus,
     Minus,
